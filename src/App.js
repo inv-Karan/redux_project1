@@ -1,12 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import I from './inputUi';
+// import O from './outputTable';
+import { Provider } from 'react-redux';
+// import  { createStore }  from 'redux';
+import yourStore from './store';
 
-function App() {
-  return (
+// const store = createStore();
+
+const App =() => (
+  <Provider store={yourStore}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      {/* <header className="App-header">
+        {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -18,9 +25,11 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+      <I/>
+      {/* <O/> */}
     </div>
-  );
-}
+    </Provider>
+);
 
 export default App;

@@ -4,10 +4,10 @@ export const ACTION2 = 'ACTION2';
 export const ACTION3 = 'ACTION3';
 export const ACTION4 = 'ACTION4';
 
-export const action1 = (actors) => dispatch => {
+export const action1 = (filteredMovie) => dispatch => {
     dispatch({
     type: ACTION1,
-    payload: actors
+    payload: filteredMovie
     });
 };
 
@@ -25,9 +25,8 @@ export const action3 = (id) => dispatch => {
     });
 };
 
-export const action4 = (id) => dispatch => {
+export const actionReset = (id) => dispatch => {
     dispatch({
-    type: ACTION4,
-    payload: id
+    type: ACTION4
     });
 };
